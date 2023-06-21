@@ -24,7 +24,7 @@ int main(){
     while(true){
        string command;
        string disease;
-        cout << "RCA Inventory>";
+        cout << ">";
 
         getline(cin, command);
         if(toLowercase(command) == "help"){
@@ -65,12 +65,8 @@ int main(){
 //WELCOME SCREEN
 void welcomeScreen(){
     cout << "                                       ##########################################################" << endl;
-    cout << "                                        *    Welcome to RCA Inventory system         *" << endl;
-    cout << "                                        *  ***********************************************    *" << endl;
-    cout << "                                        *  *       End of year3 DSA practical National exam     *" << endl;
-
-    cout << "                                        Need a help? Type 'help' then press Enter key." << endl;
-    cout << endl;
+    cout << "                                        *    Welcome to Rwanda Coding Academy Inventory system         *" << endl;
+  
 }
 
 //HELP MENU
@@ -85,8 +81,6 @@ void helpMenu(){
 void returnHelpMenuContent(){
     cout <<"           itemadd <item_id> <item_name> <quantity> <registration_date>"<< endl;
     cout <<"           itemslist"<< endl;
-    cout <<"           help: Display all the commands"<< endl;
-    cout <<"           exit: Exit the system"<< endl;
 
 }
 
@@ -152,15 +146,8 @@ void listItems(){
         return;
     }
     string line;
-    cout<<"                     *********************************************************          "<<endl;
-    cout<<"                     #        Available Items("<< nberOfItemsIn_inventory()<<") in RCA Inventory              #          "<<endl;
-    cout<<"                     *********************************************************          "<<endl;
     cout<<endl;
-    if(nberOfItemsIn_inventory() == 0){
-        cout << "                                  No items in the inventory!" << endl;
-        cout<<endl;
-        return;
-    }
+   
   //list items in alphabetical order by item name and display all  fields in the file;
     vector<string> items;
     while(getline(file, line, '\n')){
